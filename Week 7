@@ -1,0 +1,852 @@
+7a)Write a program using document object properties and methods.
+
+Aim: To Write a program using document object properties and methods.
+
+Description:
+
+Feature Usage
+
+document.title Get the title of the webpage
+
+document.URL Get the full URL of the current page
+
+document.domain Get the domain name of the page
+
+document.lastModified Shows when the document was last changed
+
+document.getElementById() Access a specific element by ID
+
+document.write() Writes content directly into the document (overwrites entire document if 
+
+used after page load)
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Document Object Demo</title>
+
+<script>
+
+function showDocumentInfo() {
+
+// Using document properties
+
+document.getElementById("title").innerText = "Title: " + document.title;
+
+document.getElementById("url").innerText = "URL: " + document.URL;
+
+document.getElementById("domain").innerText = "Domain: " + document.domain;
+
+document.getElementById("lastModified").innerText = "Last Modified: " + document.lastModified;
+
+// Using document methods
+
+document.getElementById("outputArea").style.color = "green";
+
+// document.write("<p>This line is written using <b>document.write()</b>.</p>");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Using Document Object Properties and Methods</h2>
+
+<button onclick="showDocumentInfo()">Show Document Info</button>
+
+<div id="outputArea">
+
+<p id="title"></p>
+
+<p id="url"></p>
+
+<p id="domain"></p>
+
+<p id="lastModified"></p>
+
+</div>
+
+</body>
+
+</html>
+
+Output
+
+
+b) Write a program using window object properties and methods
+
+Aim:To write a JavaScript program that demonstrates the use of window object properties and methods 
+
+such as alert(), confirm(), prompt(), open(), close(), and setTimeout().
+
+Description:
+
+Feature Description
+
+window.innerHeight / innerWidth Gets the visible area of the browser window.
+
+window.location.href Returns the current page URL.
+
+window.alert() Displays an alert dialog box.
+
+window.open() Opens a new browser window/tab.
+
+window.confirm() Asks user for OK/Cancel confirmation.
+
+window.prompt() Gets user input via dialog box.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Window Object Demo</title>
+
+<script>
+
+function showWindowInfo() {
+
+// Using window properties
+
+document.getElementById("height").innerText = "Inner Height: " + window.innerHeight + " px";
+
+document.getElementById("width").innerText = "Inner Width: " + window.innerWidth + " px";
+
+document.getElementById("location").innerText = "Location: " + window.location.href;
+
+// Using window methods
+
+window.alert("This is an alert from window.alert()");
+
+}
+
+function openNewWindow() {
+
+// Open a new window or tab
+
+window.open("https://www.example.com", "_blank");
+
+}
+
+function confirmAction() {
+
+// Using window.confirm()
+
+let result = window.confirm("Do you want to continue?");
+
+document.getElementById("confirmResult").innerText = result
+
+? "You clicked OK"
+
+: "You clicked Cancel";
+
+}
+
+function promptInput() {
+
+// Using window.prompt()
+
+let name = window.prompt("Enter your name:");
+
+if (name)
+
+document.getElementById("promptResult").innerText = "Hello, " + name + "!";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Using Window Object Properties and Methods</h2>
+
+<button onclick="showWindowInfo()">Show Window Info</button><br><br>
+
+<button onclick="openNewWindow()">Open New Window</button><br><br>
+
+<button onclick="confirmAction()">Confirm Action</button><br><br>
+
+<button onclick="promptInput()">Prompt for Name</button><br><br>
+
+<p id="height"></p>
+
+<p id="width"></p>
+
+<p id="location"></p>
+
+<p id="confirmResult" style="color: blue;"></p>
+
+<p id="promptResult" style="color: green;"></p>
+
+</body>
+</html>
+
+Output:
+
+
+
+7 c) Write a program using array object properties and methods.
+
+Aim: To write a JavaScript program that demonstrates the use of Array object properties and methods such as 
+
+length, push(), pop(), shift(), unshift(), sort(), reverse(), and join().
+
+Description:
+
+Feature Description
+
+.length Returns the number of elements in the array
+
+.push() Adds an element to the end of the array
+
+.pop() Removes the last element from the array
+
+.unshift() Adds an element to the start of the array
+
+.shift() Removes the first element from the array
+
+.indexOf() Returns the index of a specified element
+
+.join() Joins array elements into a single string
+
+Program:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+</head>
+
+<body>
+
+<h2>JavaScript Array Object Properties & Methods</h2>
+
+<script>
+
+// Array declaration
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+document.write("Original Array: " + fruits + "<br><br>");
+
+// Property: length
+
+document.write("length of Array: " + fruits.length + "<br><br>");
+
+// add at last
+
+fruits.push("Orange")
+
+ document.write("After push('Orange'): " + fruits + "<br><br>");
+
+// remove last
+
+fruits.pop();
+
+document.write("After pop(): " + fruits + "<br><br>"); 
+
+// add at beginning
+
+fruits.unshift("Grapes"); 
+
+document.write("After unshift('Grapes'): " + fruits + "<br><br>");
+
+// remove first
+
+fruits.shift(); 
+
+document.write("After shift(): " + fruits + "<br><br>");
+
+// Searching
+
+document.write("Index of 'Banana': " + fruits.indexOf("Banana") + "<br><br>");
+
+document.write("Includes 'Mango': " + fruits.includes("Mango") + "<br><br>");
+
+// Extracting & combining
+
+document.write("Slice (1,3): " + fruits.slice(1,3)+ "<br><br>");
+
+fruits.splice(1,1,"Peach"); // replace Banana with Peach
+
+document.write("After splice: " + fruits + "<br><br>");
+
+let moreFruits = ["Kiwi", "Papaya"];
+
+document.write("Concat: " + fruits.concat(moreFruits) + "<br><br>");
+
+// Converting
+
+document.write("join('-'): " + fruits.join(" - ") + "<br><br>");
+
+document.write("toString(): " + fruits.toString() + "<br><br>");
+
+// Sorting
+
+document.write("sort(): " + fruits.sort() + "<br><br>");
+
+document.write("reverse(): " + fruits.reverse()+ "<br>")
+
+</script>
+</body>
+
+</html>
+
+
+7 d) Write a program using math object properties and methods
+
+Aim: To Write a program using math object properties and methods
+
+Description: The Math object in JavaScript provides properties and methods for performing mathematical 
+
+tasks. Unlike other objects, you cannot create a Math object with new Math(), since it is a built-in static 
+
+object. The Math object includes useful properties like Math.PI (value of π) and Math.E (Euler’s number), 
+
+as well as methods for calculations such as Math.sqrt(), Math.pow(), Math.random(), Math.round(), 
+
+Math.floor(), Math.ceil(), Math.max(), and Math.min().
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Math Object Demo</title>
+
+<script>
+
+function showMathOperations() {
+
+let number = 9.56;
+
+// Math properties
+
+let pi = Math.PI;
+
+let e = Math.E;
+
+// Math methods
+
+let round = Math.round(number);
+
+let floor = Math.floor(number);
+
+let ceil = Math.ceil(number);
+
+let sqrt = Math.sqrt(64);
+
+let pow = Math.pow(2, 5);
+
+let abs = Math.abs(-7);
+
+let max = Math.max(10, 30, 20, 5);
+
+let min = Math.min(10, 30, 20, 5);
+
+let random = Math.random(); // Between 0 and 1
+
+// Output to HTML
+
+document.getElementById("pi").innerText = "Math.PI: " + pi;
+
+document.getElementById("e").innerText = "Math.E: " + e;
+
+document.getElementById("round").innerText = "Math.round(9.56): " + round;
+
+document.getElementById("floor").innerText = "Math.floor(9.56): " + floor;
+
+document.getElementById("ceil").innerText = "Math.ceil(9.56): " + ceil;
+
+document.getElementById("sqrt").innerText = "Math.sqrt(64): " + sqrt;
+
+document.getElementById("pow").innerText = "Math.pow(2, 5): " + pow;
+
+document.getElementById("abs").innerText = "Math.abs(-7): " + abs;
+
+document.getElementById("max").innerText = "Math.max(10, 30, 20, 5): " + max;
+
+document.getElementById("min").innerText = "Math.min(10, 30, 20, 5): " + min;
+
+document.getElementById("random").innerText = "Math.random(): " + random.toFixed(4);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>JavaScript Math Object Demo</h2>
+
+<button onclick="showMathOperations()">Show Math Results</button>
+
+<p id="pi"></p>
+
+<p id="e"></p>
+
+<p id="round"></p>
+
+<p id="floor"></p>
+
+<p id="ceil"></p>
+
+<p id="sqrt"></p>
+
+<p id="pow"></p>
+
+<p id="abs"></p>
+
+<p id="max"></p>
+
+<p id="min"></p>
+
+<p id="random"></p>
+
+</body>
+</html>
+
+Outpu
+
+
+
+
+7 e) Write a program using string object properties and methods
+
+Aim:To demonstrate the use of String object properties and methods in JavaScript.
+
+Description:The String object is used to handle text. It has properties like length and methods like 
+
+toUpperCase(), toLowerCase(), charAt(), indexOf(), substring(), replace(), concat(), and trim() to 
+
+manipulate strings.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>String Object Demo</title>
+
+<script>
+
+function showStringOperations() {
+
+let text = " JavaScript is Powerful! ";
+
+// String Properties & Methods
+
+let length = text.length;
+
+let trimmed = text.trim();
+
+let upper = text.toUpperCase();
+
+let lower = text.toLowerCase();
+
+let char = text.charAt(5);
+
+let index = text.indexOf("Powerful");
+
+let includes = text.includes("Script");
+
+let replaced = text.replace("Powerful", "Amazing");
+
+let sliced = text.slice(2, 12);
+
+let sub = text.substring(2, 12);
+
+let split = text.trim().split(" "); // split into words
+
+// Output results
+
+document.getElementById("original").innerText = "Original Text: '" + text + "'";
+
+document.getElementById("length").innerText = "Length: " + length;
+
+document.getElementById("trimmed").innerText = "Trimmed: '" + trimmed + "'";
+
+document.getElementById("upper").innerText = "Uppercase: " + upper;
+
+document.getElementById("lower").innerText = "Lowercase: " + lower;
+
+document.getElementById("char").innerText = "Character at index 5: '" + char + "'";
+
+document.getElementById("index").innerText = "Index of 'Powerful': " + index;
+
+document.getElementById("includes").innerText = "Includes 'Script': " + includes;
+
+document.getElementById("replace").innerText = "Replace 'Powerful' with 'Amazing': " + replaced;
+
+document.getElementById("slice").innerText = "Slice (2,12): " + sliced;
+
+document.getElementById("substring").innerText = "Substring (2,12): " + sub;
+
+document.getElementById("split").innerText = "Split into words: " + split.join(" | ");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>JavaScript String Object Demo</h2>
+
+<button onclick="showStringOperations()">Run String Operations</button>
+
+<p id="original"></p>
+
+<p id="length"></p>
+
+<p id="trimmed"></p>
+
+<p id="upper"></p>
+
+<p id="lower"></p>
+
+<p id="char"></p>
+
+<p id="index"></p>
+
+<p id="includes"></p>
+
+<p id="replace"></p>
+
+<p id="slice"></p>
+
+<p id="substring"></p>
+
+<p id="split"></p>
+
+</body>
+
+</html>
+
+
+
+7 f) Write a program using regex object properties and methods.
+
+Aim: To demonstrate the use of RegExp object properties and methods in JavaScript.
+
+Description: The RegExp object is used for pattern matching and searching in strings. Properties include 
+
+global, ignoreCase, and multiline. Methods like test() and exec() are used to check and extract matches.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>RegExp Object Demo</title>
+
+</head>
+
+<body>
+
+<h2>Email Validation using RegExp Object</h2>
+
+<input type="text" id="email" placeholder="Enter email">
+
+<button onclick="validateEmail()">Validate</button>
+
+<p id="result"></p>
+
+<script>
+
+ function validateEmail() {
+
+ let input = document.getElementById("email").value;
+
+ // Regular Expression for email
+
+ let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+ // Create a RegExp object
+
+ let regex = new RegExp(pattern);
+
+ // Use RegExp methods
+
+ let result = regex.test(input); // returns true/false
+
+ let match = input.match(regex); // returns match array or null
+
+ let execResult = regex.exec(input); // returns match result or null
+
+ // Using RegExp properties (after a match attempt)
+
+ document.getElementById("result").innerHTML = `
+
+ <strong>Validation Result:</strong> ${result ? "Valid Email " : "Invalid Email "}<br>
+
+ <strong>Match:</strong> ${match ? match[0] : "No match"}<br>
+
+ <strong>Exec Output:</strong> ${execResult ? execResult[0] : "No match"}<br>
+
+ <strong>RegExp Source:</strong> ${regex.source}<br>
+
+ <strong>Global Flag:</strong> ${regex.global}<br>
+
+ <strong>Ignore Case:</strong> ${regex.ignoreCase}<br>
+
+ <strong>Multiline:</strong> ${regex.multiline}
+
+ `;
+
+ }
+
+</script>
+
+</body>
+
+</html>
+
+Output:
+
+
+7 g) Write a program using date object properties and methods.
+
+Aim: To create a program that shows how to use the Date object’s properties and methods for handling and 
+
+displaying date and time information in JavaScript.
+
+Description: The Date object allows developers to work with dates and times easily. Using methods like 
+
+getFullYear(), getMonth(), getDate(), getHours(), and toLocaleString(), we can extract and display specific 
+
+parts of the current date and time. This is useful in applications such as clocks, calendars, and event tracking 
+
+systems.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Date Object Demo</title>
+
+</head>
+
+<body>
+
+<h2>JavaScript Date Object Example</h2>
+
+<button onclick="showDateInfo()">Show Current Date Info</button>
+
+<p id="output"></p>
+
+<script>
+
+function showDateInfo() {
+
+// Create a Date object representing the current date and time
+
+let currentDate = new Date();
+
+// Using Date object methods
+
+let fullDate = currentDate.toDateString(); 
+
+let time = currentDate.toTimeString(); 
+
+let year = currentDate.getFullYear(); 
+
+let month = currentDate.getMonth(); 
+
+let date = currentDate.getDate(); 
+
+let day = currentDate.getDay(); 
+
+let hours = currentDate.getHours(); 
+
+let minutes = currentDate.getMinutes(); 
+
+let seconds = currentDate.getSeconds(); 
+
+let milliseconds = currentDate.getMilliseconds();
+
+let timezoneOffset = currentDate.getTimezoneOffset(); 
+
+document.getElementById("output").innerHTML = `
+
+<strong>Full Date:</strong> ${fullDate} <br>
+
+<strong>Time:</strong> ${time} <br>
+
+<strong>Year:</strong> ${year} <br>
+
+<strong>Month (0-based):</strong> ${month} <br>
+
+<strong>Date:</strong> ${date} <br>
+
+<strong>Day of Week (0=Sun):</strong> ${day} <br>
+
+<strong>Hours:</strong> ${hours} <br>
+
+<strong>Minutes:</strong> ${minutes} <br>
+
+<strong>Seconds:</strong> ${seconds} <br>
+
+<strong>Milliseconds:</strong> ${milliseconds} <br>
+
+<strong>Timezone Offset (in mins):</strong> ${timezoneOffset}
+
+}
+
+</script>
+
+</body>
+
+</html>
+
+Output:
+
+
+
+7 h) Write a program to explain user-defined object by using properties, methods, accessors, 
+
+constructors and display.
+
+Aim: To create a program that demonstrates a user-defined object in JavaScript using properties, methods, 
+
+accessors (get/set), constructors, and displaying the values.
+
+Description: A user-defined object models real-world entities with custom properties and methods. 
+
+Constructors initialize values, accessors (get/set) control property access, and methods define behaviors. The 
+
+program demonstrates creating, updating, and displaying object data.
+
+PROGRAM:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+</head>
+
+<body>
+
+<h2>User defined Objects- Car</h2>
+
+<script>
+
+// Define a class named 'Car'
+
+class Car {
+
+// Constructor function 
+
+constructor(make, model, year) {
+
+this.make = make;
+
+this.model = model;
+
+this.year = year;
+
+}
+
+// Accessor: Getter for Car
+
+getCarDetails() {
+
+ return `Model: ${this.model} <br> Make: ${this.make} <br> Year: ${this.year}`;
+
+}
+
+// Accessor: Setter for Car
+
+setCarDetails(make, model, year)
+
+{
+
+this.make = make;
+
+this.model = model;
+
+this.year = year;
+
+}
+
+// Method to display Car details
+
+startEngine() {
+
+return `Model: ${this.model} <br> Make: ${this.make} <br> Year: ${this.year}<br>`;
+
+}
+
+}
+
+// Create object (instances) from the Car class
+
+const myCar = new Car("Toyota", "Camry", 2023);
+
+// Access properties and call methods on the objects
+
+document.write("<strong>Car Details:</strong><br>");
+
+document.write(myCar.startEngine()+"<br>"); 
+
+// Update car details using setter
+
+myCar.setCarDetails("Honda", "Civic", 2022);
+
+// Display using getter method
+
+document.write("<strong>Reassign Car details using Setter</strong><br>");
+
+document.write("<strong>Access New Car Details using getter</strong><br>");
+
+document.write(myCar.getCarDetails()+"<br>"); 
+
+</script>
+
+</body>
+
+</html>
