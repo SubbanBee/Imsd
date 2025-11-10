@@ -1,0 +1,483 @@
+6 a) Write a program to embed internal and external javascript in a webpage.
+
+Aim:Write a program to embed internal and external javascript in a webpage.
+
+Description:
+
+• Demonstrates use of internal and external JavaScript in a webpage.
+
+• Internal script is written inside <script> tags within the HTML file.
+
+• External script is stored in a separate .js file and linked using <script src="">.
+
+• Two buttons are used to run internal and external JavaScript functions separately.
+
+• Shows how to organize and execute scripts in different ways.
+
+Program:
+
+script.js:
+
+// script.js
+
+function greetExternal() {
+
+alert("Hello from External JavaScript!");
+
+}
+
+jsdemo.html:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Internal and External JavaScript</title>
+
+ <!-- Link to external JavaScript file -->
+
+<script src="script.js"></script>
+
+<!-- Internal JavaScript -->
+
+<script>
+
+function greetInternal() {
+
+alert("Hello from Internal JavaScript!");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Welcome to JavaScript Demo</h1>
+
+<button onclick="greetInternal()">Click for Internal Script</button>
+
+<button onclick="greetExternal()">Click for External Script</button>
+
+</body>
+
+</html>
+
+Output:
+
+
+
+b) Write a program to explain the different ways for displaying output.
+
+Aim:Write a program to explain the different ways for displaying output.
+
+Description:
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Output Methods in JavaScript</title>
+
+<script>
+
+// Method 1: alert() - Popup alert box
+
+function showAlert() {
+
+alert("This is an alert box!");
+
+}
+
+// Method 2: console.log() - Logs output to browser console
+
+function showConsoleLog() {
+
+console.log("This is a console log message.");
+
+}
+
+// Method 3: document.write() - Writes directly to the web page
+
+function showDocumentWrite() {
+
+document.write("<p>This is written using document.write().</p>");
+
+}
+
+// Method 4: innerHTML - Outputs content into an HTML element
+
+function showInnerHTML() {
+
+document.getElementById("outputArea").innerHTML = "This is output using innerHTML.";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>JavaScript Output Methods</h2>
+
+<button onclick="showAlert()">Show Alert Box</button><br><br>
+
+<button onclick="showConsoleLog()">Show Console Log</button><br><br>
+
+<button onclick="showDocumentWrite()">Use document.write()</button><br><br>
+
+<button onclick="showInnerHTML()">Use innerHTML</button><br><br>
+
+<div id="outputArea" style="color: blue; font-weight: bold;"></div>
+
+</body>
+
+</html>
+
+
+6 c) Write a program to explain the different ways for taking input.
+
+Aim:Write a program to explain the different ways for taking input.
+
+Description:
+
+• This program explains different ways of taking input in JavaScript.
+
+• Prompt() is used to get input directly from a popup dialog box.
+
+• Textbox/Input field allows users to enter data in the webpage.
+
+• Console can be used by developers to take or view input through browser tools.
+
+• It helps understand multiple input methods for different use cases.
+
+Program:
+
+<html>
+
+<head>
+
+<style>
+
+table {
+
+border: 1;
+
+width: 50%;
+
+margin-top: 20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Different ways to take Input in Javascript</h1>
+
+<form onsubmit="registrationFun(event)">
+
+<label>Name</label><br>
+
+<input type="text" id="name" name="name" ><br>
+
+<label>Email Id: </label><br>
+
+<input type="email" id="email" name="email" ><br>
+
+<label>Date of Birth</label><br>
+
+<input type="date" id="dob" name="dob" ><br>
+
+<label>Address</label><br>
+
+<textarea id="address" name="address" ></textarea><br>
+
+<p>Gender:</p>
+
+<input type="radio" id="male" name="gender" value="male">
+
+<label>Male</label><br>
+
+<input type="radio" id="female" name="gender" value="female">
+
+<label>Female</label><br>
+
+ <p>Languages Known:</p>
+
+<input type="checkbox" id="telugu" name="language" value="telugu">
+
+<label>Telugu</label><br>
+
+<input type="checkbox" id="english" name="language" value="english">
+
+<label>English</label><br>
+
+<input type="checkbox" id="hindi" name="language" value="hindi">
+
+<label>Hindi</label><br>
+
+<input type="checkbox" id="tamil" name="language" value="tamil">
+
+<label>Tamil</label><br>
+
+<input type="checkbox" id="spanish" name="language" value="spanish">
+
+<label>Spanish</label><br>
+
+<p>Country:</p>
+
+<select id="country">
+
+<option>Select</option>
+
+<option value="india">India</option>
+
+<option value="china">China</option>
+
+<option value="japan">Japan</option>
+
+</select><br><br>
+
+<button>SignIn </button>
+
+<button onclick="loginFun()" >LogIn</button>
+
+</form>
+
+<div id="result"></div>
+<script> 
+
+// Method 1: prompt() - Takes input using a dialog box
+
+function loginFun()
+
+{
+
+username=prompt("ENTER USERNAME");
+
+password=prompt("ENTER PASSWORD");
+
+alert("Login Successful" + "username : " + username + " password : " + password);
+
+}
+
+<!-- Method 2: Input field + DOM access -->
+
+function registrationFun(event)
+
+{
+
+event.preventDefault();
+
+name=document.getElementById("name").value; 
+
+ mail=document.getElementById("email").value;
+
+dob=document.getElementById("dob").value;
+
+address=document.getElementById("address").value;
+
+country=document.getElementById("country").value;
+
+language=document.getElementsByName("language");
+
+selectedLanguage=[];
+
+for ( i = 0; i < language.length; i++)
+
+{
+
+if (language[i].checked)
+
+{
+
+selectedLanguage.push(language[i].value);
+
+}
+
+}
+
+gender = document.getElementsByName("gender");
+
+for ( i = 0; i < gender.length; i++)
+
+{
+
+if (gender[i].checked) {
+
+var selectedGender = gender[i].value;
+
+break;
+
+}
+
+}
+
+output =
+
+`<strong>Your Registration Details:</strong>
+
+<table>
+
+<tr><td>Name</td> <td>${name}</td></tr>
+
+<tr><td>Email</td> <td>${mail}</td></tr>
+
+<tr><td>Date of Birth</td> <td>${dob}</td></tr>
+
+<tr><td>Address</td> <td>${address}</td></tr>
+
+<tr><td>Country</td> <td>${country}</td></tr>
+
+<tr><td>Language</td> <td>${selectedLanguage}</td></tr>
+
+<tr><td>Gender</td> <td>${selectedGender }</td></tr>
+
+</table>
+
+`; 
+
+document.getElementById("result").innerHTML=output;
+
+}
+
+</script>
+
+</body>
+
+</html>
+
+
+6 d) Create a webpage which uses prompt dialogue box to ask a voter for his name and age. 
+
+Display the information in table format along with either the voter can vote or not.
+
+Aim:Create a webpage which uses prompt dialogue box to ask a voter for his name and age. Display the 
+
+information in table format along with either the voter can vote or not.
+
+Description:
+
+• This program asks the user for their name and age using the prompt() dialog box.
+
+• The entered details are then displayed in a table format on the webpage.
+
+• Based on the age, the program checks if the user is eligible to vote (age ≥ 18).
+
+• If eligible, it shows “Can Vote”; otherwise, it shows “Cannot Vote”.
+
+• This demonstrates how to take user input using prompts and display the information 
+
+dynamically in an HTML table.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Voter Eligibility Check</title>
+
+<style>
+
+table {
+
+border-collapse: collapse;
+
+margin-top: 20px;
+
+width: 50%;
+
+}
+
+th, td {
+
+border: 1px solid black;
+
+padding: 10px;
+
+text-align: center;
+
+}
+
+th {
+
+background-color: #f2f2f2;
+
+}
+
+</style>
+
+<script>
+
+function checkVoter() {
+
+let name = prompt("Enter your name:");
+
+let age = prompt("Enter your age:");
+
+age = parseInt(age); // Convert age to number
+
+ let status = (age >= 18) ? "Eligible to Vote" : "Not Eligible to Vote";
+
+// Insert data into the table
+
+document.getElementById("voterName").innerText = name;
+
+document.getElementById("voterAge").innerText = age;
+
+document.getElementById("voterStatus").innerText = status;
+
+}
+
+</script>
+
+</head>
+
+<body onload="checkVoter()">
+
+<h2>Voter Information</h2>
+
+<table>
+
+<tr>
+
+<th>Name</th>
+
+<th>Age</th>
+
+<th>Voter Status</th>
+
+</tr>
+
+<tr>
+
+<td id="voterName"></td>
+
+<td id="voterAge"></td>
+
+<td id="voterStatus"></td>
+
+</tr>
+</table>
+
+</body>
+
+</html>
+
+Output
+
+
