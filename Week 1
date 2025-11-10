@@ -1,0 +1,328 @@
+a) Write a HTML program, to explain the working of lists. 
+
+Aim : HTML program, to explain the working of lists. It should have an ordered list, unordered list, nested lists 
+
+and ordered list in an unordered list and definition lists.
+
+Description :In HTML, list tags are used to display a group of related items in a structured way. HTML provides 
+
+different types of lists, each serving a specific purpose.
+
+<ul> - Creates an unordered list (bulleted).
+
+<ol> - Creates an ordered list (numbered or lettered).
+
+<li> - Defines a list item inside <ul> or <ol>.
+
+<dl> - Creates a description list (used for definitions or terms).
+
+<dt> - Defines a term/name in a description list.
+
+Program :
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>HTML Lists Example</title>
+
+</head>
+
+<body>
+
+ <h1>Working of Lists in HTML</h1>
+
+ <h2>1. Unordered List</h2>
+
+ <p>This list uses bullet points:</p>
+
+ <ul>
+
+ <li>Apple</li>
+
+ <li>Banana</li>
+
+ <li>Orange</li>
+
+ </ul>
+
+ <h2>2. Ordered List</h2>
+
+ <p>This list uses numbers:</p>
+
+ <ol>
+
+ <li>First Step</li>
+
+ <li>Second Step</li>
+
+ <li>Third Step</li>
+
+ </ol>
+
+ <h2>3. Description List</h2>
+
+ <p>This list gives terms and their descriptions:</p>
+
+ <dl>
+
+ <dt>HTML</dt>
+
+ <dd>HyperText Markup Language</dd>
+
+ <dt>CSS</dt>
+
+ <dd>Cascading Style Sheets</dd>
+
+ <dt>JS</dt>
+
+ <dd>JavaScript</dd>
+
+ </dl>
+
+</body>
+
+</html>
+
+Output:
+
+1 b) Write a HTML program, to explain the working of hyperlinks using <a> tag and href, target Attributes. 
+
+Aim: HTML program, to explain the working of hyperlinks using <a> tag and href, target Attributes. 
+
+Description:
+
+<a> (Anchor Tag):
+
+Used to create hyperlinks to other web pages, email addresses, or files.
+
+href (Hypertext REFerence):
+
+Specifies the URL or link destination.
+
+target Attribute:
+
+Specifies where to open the linked document.
+
+_blank opens the link in a new tab.
+
+_self (default) opens in the same tab.
+
+<img> (Image Tag):
+
+Used to embed images in a web page.
+
+src defines the image path.
+
+alt provides alternative text if the image doesn't load.
+
+width sets the image width in pixels.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>Hyperlink Example 2</title>
+
+</head>
+
+<body>
+
+ <h1>Working with Hyperlinks in HTML</h1>
+
+ <!-- Text Hyperlink -->
+
+ <h2>Text Hyperlink</h2>
+
+ <p>
+
+ Visit the official website of 
+
+ <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+
+ to explore more information.
+
+ </p>
+
+ <!-- Image Hyperlink -->
+
+ <h2>Image Hyperlink</h2>
+
+ <p>Click the image below to visit YouTube:</p>
+
+ <a href="https://www.youtube.com" target="_blank">
+
+ <img src="youtube.png" alt="YouTube" width="80" height="50">
+
+ </a>
+
+</body>
+
+</html>
+
+Output:
+
+
+1 c) Create a HTML document that has your image and your friend’s image with a specific height and 
+
+width. Also when clicked on the images it should navigate to their respective profiles.
+
+Aim: HTML document that has your image and your friend’s image with a specific height and width. Also when 
+
+clicked on the images it should navigate to their respective profiles.
+
+Description:
+
+In this program, the concept of different types of lists in HTML is demonstrated. HTML provides multiple list 
+
+tags that help in organizing and structuring information:
+
+• <ol>: It is used to create an ordered list, where items are displayed with numbers or letters.
+
+• <ul>: It is used to create an unordered list, where items are displayed with bullets.
+
+• Lists can be nested, meaning one list can be placed inside another. For example, an unordered list can be 
+
+included inside an ordered list, or vice versa, to show hierarchical data.
+
+• <dl>: It is used to create a definition list, where <dt> defines the term and <dd> gives its description.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>My Profile and Friend's Profile</title>
+
+</head>
+
+<body>
+
+ <h1>My Profile and My Friend's Profile</h1>
+
+ <!-- My Profile -->
+
+ <h2>1. My Profile</h2>
+
+ <a href="https://www.instagram.com/your_profile" target="_blank">
+
+ <img src="myphoto.jpg" alt="My Profile Photo" width="150" height="150">
+
+ </a>
+
+ <p>Click my photo to view my profile.</p>
+
+ <!-- Friend's Profile -->
+
+ <h2>2. My Friend's Profile</h2>
+
+ <a href="https://www.instagram.com/friend_profile" target="_blank">
+
+ <img src="friendphoto.jpg" alt="Friend's Profile Photo" width="150" height="150">
+
+ </a>
+
+ <p>Click my friend's photo to view their profile.</p>
+
+</body>
+
+</html>
+
+Output:
+
+
+Write a HTML Program, in such a way that ,rather than placing large images on a page, the preferred 
+
+technique is to use thumbnails by setting the height and width parameters to something like to 100*100 
+
+pixels. Each thumbnail image is also a link to a full sized version of the image. Create an image gallery 
+
+using this technique.
+
+Aim: To write an HTML program that creates an image gallery using thumbnail images (100×100 pixels), where 
+
+each thumbnail acts as a link to its full-sized version.
+
+Description:
+
+In HTML, the preferred way to display images on a webpage without slowing down the page is by using 
+
+thumbnails. Thumbnails are smaller versions of the original images, created by setting the height and width 
+
+attributes (for example, 100×100 pixels).
+
+Instead of directly placing large images, each thumbnail is made clickable using the <a> tag, which links to the 
+
+full-sized image. The target="_blank" attribute is used so that the full-size image opens in a new tab, without 
+
+disturbing the current page.
+
+This method allows users to quickly preview multiple images in a gallery format, while still being able to view 
+
+larger versions when needed. It improves page loading speed, usability, and keeps the design clean and organized.
+
+Program :
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title> Thumbnail Gallery</title>
+
+</head>
+
+<body>
+
+ <h1> Thumbnail Image Gallery</h1>
+
+ <p>Click on any image to view the full-size version.</p>
+
+ <!-- Gallery Thumbnails -->
+
+ <a href="https://picsum.photos/id/1015/600/400" target="_blank">
+
+ <img src="https://picsum.photos/id/1015/100/100" alt="Beautiful Image 1">
+
+ </a>
+
+ <a href="https://picsum.photos/id/1020/600/400" target="_blank">
+
+ <img src="https://picsum.photos/id/1020/100/100" alt="Beautiful Image 2">
+
+ </a>
+
+ <a href="https://picsum.photos/id/1025/600/400" target="_blank">
+
+ <img src="https://picsum.photos/id/1025/100/100" alt="Beautiful Image 3">
+
+ </a>
+
+ <a href="https://picsum.photos/id/1035/600/400" target="_blank">
+
+ <img src="https://picsum.photos/id/1035/100/100" alt="Beautiful Image 4">
+
+ </a>
+
+ <a href="https://picsum.photos/id/1043/600/400" target="_blank">
+
+ <img src="https://picsum.photos/id/1043/100/100" alt="Beautiful Image 5">
+
+ </a>
+
+</body>
+
+</html>
+
+Output:
+
