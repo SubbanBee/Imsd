@@ -1,0 +1,359 @@
+3a) Write a HTML program, that makes use of <article>, <aside>, <figure>, <figcaption>, <footer>, 
+
+<header>, <main>, <nav>, <section>, <div>, <span> tags.
+
+Aim: Write a HTML program, that makes use of <article>, <aside>, <figure>, <figcaption>, <footer>, 
+
+<header>, <main>, <nav>, <section>, <div>, <span> tags.
+
+Description:
+
+• <header> contains the website title and navigation links using <nav>.
+
+• <main> holds the main content, divided into <section>s.
+
+• Each <section> includes an <article> representing an individual post or item.
+
+• <figure> and <figcaption> are used to add images with captions.
+
+• <aside> provides related or side content (like tips or ads).
+
+• <footer> shows the closing content such as copyright.
+
+• <div> is used for general layout grouping, and <span> for inline styling or highlighting text.
+
+Program:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8" />
+
+ <title>Semantic HTML Example</title>
+
+</head>
+
+<body>
+
+ <header>
+
+ <h1>My Blog</h1>
+
+ <nav>
+
+ <a href="#home">Home</a> |
+
+ <a href="#posts">Posts</a> |
+
+ <a href="#about">About</a>
+
+ </nav>
+
+ </header>
+
+ <main>
+
+ <section id="posts">
+
+ <article>
+
+ <header><h2>First Post</h2></header>
+
+ <figure>
+
+ <img src="https://via.placeholder.com/150" alt="Placeholder" />
+
+ <figcaption>Sample Image</figcaption>
+
+ </figure>
+
+ <p>This is an example <span>article</span> demonstrating semantic tags.</p>
+
+ <footer>Posted on Oct 7, 2025</footer>
+
+ </article>
+
+ <aside>
+
+ <p>Related info or ads go here.</p>
+
+ </aside>
+
+ </section>
+
+ <div>
+
+ <p>A generic container using &lt;div&gt; for layout.</p>
+
+ </div>
+
+ </main>
+
+ <footer>
+
+ <p>© 2025 My Blog</p>
+
+ </footer>
+
+</body>
+
+</html>
+3 b) Write a HTML program, to embed audio and video into HTML web page
+
+Aim: Write a HTML program, to embed audio and video into HTML web page
+
+Description:
+
+• The <audio> tag is used to embed sound files like music or voice in a web page.
+
+• The <video> tag allows embedding video clips directly into the page.
+
+• Both tags support formats like MP3 (audio) and MP4 (video).
+
+• The controls attribute adds play, pause, and volume options.
+
+• Optional attributes include autoplay, loop, muted, and poster (for video).
+
+• You can use multiple <source> tags to support different file types for compatibility.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Embedding Audio and Video</title>
+
+</head>
+
+<body>
+
+<h2>HTML5 Audio and Video Embedding</h2>
+
+<!-- Embed Audio -->
+
+<section>
+
+<h3>Audio Example:</h3>
+
+<audio controls>
+
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" 
+
+type="audio/mpeg"> Your browser does not support the audio element.
+
+</audio>
+
+</section>
+
+<br>
+
+<!-- Embed Video -->
+
+<section>
+
+<h3>Video Example:</h3>
+
+<video width="600" height="340" controls>
+
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+
+Your browser does not support the video tag.
+
+</video>
+
+</section>
+
+</body>
+
+</html>
+
+Output:
+
+
+
+3 c) Write a program to apply different types (or levels of styles or style specification formats) -
+
+inline, internal, external styles to HTML elements. (identify selector, property and value).
+
+Aim: Write a program to apply different types (or levels of styles or style specification formats) -inline, 
+
+internal, external styles to HTML elements. (identify selector, property and value).
+
+Description:
+
+CSS Style Specification Formats:
+
+1. Inline CSS – inside the HTML tag using style attribute
+
+2. Internal CSS – inside a <style> block in the <head>
+
+3. External CSS – in a separate .css file and linked using <link> (simulated here)
+
+Each CSS rule has:
+
+• Selector – the HTML element(s) to style
+
+• Property – the style attribute to change
+
+• Value – the setting for that property
+
+Syntax:
+
+selector {
+
+property: value;
+
+}
+
+Example 1 (from inline CSS):
+
+<h1 style="color: blue;">Hello</h1>
+
+• Selector: h1 (implied, though it's inline)
+
+• Property: color
+
+• Value: blue
+
+Example 2 (from internal CSS):
+
+h2 {
+
+ color: darkgreen;
+
+ font-family: Georgia, serif;
+
+}
+
+Selector: h2
+
+• First:
+
+o Property: color
+
+o Value: darkgreen
+
+• Second:
+
+o Property: font-family
+
+o Value: Georgia, serif
+
+Example 3 (from external CSS):
+
+.external-paragraph {
+
+ font-size: 18px;
+
+ color: darkred;
+
+}
+
+Selector: .external-paragraph (a class selector)
+
+• First:
+
+o Property: font-size
+
+o Value: 18px
+
+• Second:
+
+o Property: color
+
+o Value: darkred
+
+Program:
+
+index.html:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <title>CSS Styles Demo</title>
+<!-- Internal CSS -->
+
+ <style>
+
+ h2 {
+
+ color: darkgreen;
+
+ font-family: Georgia, serif;
+
+ }
+
+ .internal-box {
+
+ background-color: lightyellow;
+
+ border: 2px solid orange;
+
+ padding: 10px;
+
+ }
+
+ </style>
+
+ <!-- External CSS -->
+
+ <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+ <h1 style="color: blue; font-size: 28px;">Inline Styled Heading (h1)</h1>
+
+ <h2>Internal Styled Heading (h2)</h2>
+
+ <div class="internal-box">
+
+ This box uses <strong>internal CSS</strong> for styling.
+
+ </div>
+
+ <br>
+
+ <p class="external-paragraph">
+
+ This paragraph is styled using <strong>external CSS</strong>.
+
+ </p>
+
+</body>
+
+</html>
+
+styles.css:
+
+/* External CSS styles */
+
+.external-paragraph {
+
+ font-size: 18px;
+
+ color: darkred;
+
+ background-color: #f0f0f0;
+
+ padding: 12px;
+
+ border-left: 4px solid red;
+
+}
+
+Output
+
+
