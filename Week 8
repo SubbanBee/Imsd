@@ -1,0 +1,304 @@
+8.a) Write a program which asks the user to enter three integers, obtains the 
+
+numbers from the user, and outputs HTML text that displays the larger number 
+
+followed by the words “LARGER NUMBER” in an information message dialog. 
+
+If the numbers are equal, output HTML text as “EQUAL NUMBERS”. 
+
+Aim : To write a program that accepts three integers from the user and displays an 
+
+HTML-formatted message indicating the largest number or stating that all numbers 
+
+are equal.
+
+Description : The program prompts the user to input three integers. It compares the 
+
+values to determine the largest among them. If all three numbers are equal, it outputs 
+
+the message: "EQUAL NUMBERS" If one number is larger than the others, it 
+
+outputs: " LARGER NUMBER" The output is displayed in HTML format, suitable 
+
+for embedding in a webpage or dialog box.
+
+Program:
+
+<html>
+
+<body>
+
+<script>
+
+ var num1=parseInt(prompt("Enter the First Number:"));
+
+ var num2=parseInt(prompt("Enter Second Number:"));
+
+ var num3=parseInt(prompt("Enter Third Number:"));
+
+ if(num1==num2 && num2==num3){
+
+ document.write("EQUAL NUMBERS");
+
+ }
+
+ else if(num1>num2 && num1>num3){
+
+ document.write(num1+" IS LARGER NUMBER");
+
+ }
+
+ else if(num2>num1 && num2>num3){
+
+ document.write(num2+" IS LARGER NUMBER");
+
+ }
+
+ else {
+
+ document.write(num3+" IS LARGER NUMBER"); 
+
+ }
+</script>
+
+</body>
+
+</html>
+
+Outpu
+
+
+8.b) Write a program to display week days using switch case. 
+
+Aim: To write a program that displays the name of the weekday based on a numeric 
+
+input using a switch-case control structure.
+
+Description: 
+
+1)The program prompts the user to enter a number between 1 and 7. 2) Each number 
+
+corresponds to a day of the week: Sunday, Monday, Tuesday, Wednesday, Thursday, 
+
+Friday,Saturday 3) The program uses a switch-case statement to match the input and 
+
+display the appropriate day. 4) If the input is outside the range 1–7, it displays an 
+
+“Invalid input” message. 
+
+Program: 
+
+<html>
+
+<body>
+
+<script>
+
+ var num=parseInt(prompt("Enter a number from 1 to 7"));
+
+ switch(num){
+
+ case(1): document.write("Sunday");
+
+ break;
+
+ 
+
+ case(2): document.write("Monday");
+
+ break;
+
+ case(3): document.write("Tuesday");
+
+ break;
+
+ case(4): document.write("Wednesday");
+
+ break;
+
+ case(5): document.write("Thursday");
+
+ break;
+case(6): document.write("Friday");
+
+ break;
+
+ case(7): document.write("Saturday");
+
+ break;
+
+ default: document.write("Invalid Number");
+
+ } 
+
+</script>
+
+</body>
+
+</html>
+
+Output:
+
+
+8.c) Write a program to print 1 to 10 numbers using for, while and do-while 
+
+loops. 
+
+Aim: To write a program that prints numbers from 1 to 10 using for, while, and do-
+
+while loops.
+
+Description : The program demonstrates the use of three different loop constructs: 
+
+For loop: Iterates from 1 to 10 with a counter. While loop: Uses a condition to 
+
+continue looping until the counter exceeds 10. Do-while loop: Ensures the loop body 
+
+executes at least once before checking the condition. Each loop prints the numbers 1 
+
+to 10 sequentially.This helps understand the syntax and behavior differences between 
+
+the loop types.
+
+Program: 
+
+<html>
+
+<body>
+
+<script>
+
+document.write("FOR"+"<br>")
+
+for(var i=1;i<=10;i++){
+
+document.write(i+" ");
+
+}
+
+document.write("<br>");
+
+document.write("WHILE"+"<br>")
+
+var i=1;
+
+while(i<=10){
+
+document.write(i+" ");
+
+i++;
+
+}
+
+document.write("<br>");
+document.write("DO-WHILE"+"<br>")
+
+i=1;
+
+do{
+
+document.write(i+" ");
+
+i++;
+
+}
+
+while(i<=10);
+
+</script>
+
+</body>
+
+</html>
+
+Output:
+
+
+8.d) Write a program to print data in object using for-in, for-each and for of 
+
+loops.
+
+Aim: To write a program that prints data stored in an object using for-in, forEach, 
+
+and for-of loops in JavaScript. 
+
+Description: The program defines an object with key-value pairs. It demonstrates 
+
+three loop constructs: for-in: Iterates over the keys (properties) of the object. forEach: 
+
+Used with Object.entries() or arrays to access both keys and values. for-of: Used with 
+
+Object.entries() or Object.values() to iterate over iterable structures. Each loop prints 
+
+the key and value of the object in a readable format.
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>Object Loop Example</title>
+
+</head>
+
+<body>
+
+ <h2>Displaying Object Data Using Loops</h2>
+
+ <script>
+
+ const student = {
+
+ name: "Alice",
+
+ rollNo: "24B11CS130",
+
+ course: "CSE",
+
+ year: 2025
+
+ };
+
+ // Using for...in loop (works directly with objects)
+
+ document.write("<h3>Using for...in loop:</h3>");
+
+ for (let key in student) {
+
+ document.write(key + " : " + student[key] + "<br>");
+
+ }
+
+ // Using forEach loop (works with arrays, so use Object.entries)
+document.write("<h3>Using forEach loop:</h3>");
+
+ Object.entries(student).forEach(([key, value]) => {
+
+ document.write(key + " : " + value + "<br>");
+
+ });
+
+ // Using for...of loop (works with iterable objects, so use Object.entries)
+
+ document.write("<h3>Using for...of loop:</h3>");
+
+ for (let [key, value] of Object.entries(student)) {
+
+ document.write(key + " : " + value + "<br>");
+
+ }
+
+ </script>
+
+</body>
+
+</html>
+
+Output:
+
+Result:
+
+
