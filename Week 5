@@ -1,0 +1,424 @@
+a)Write a program to demonstrate the various ways you can reference a color in CSS
+
+Aim: Write a program to demonstrate the various ways you can reference a color in CSS
+
+Description:
+
+• Named colors (e.g., red, blue)
+
+• Hexadecimal codes (#RRGGBB or #RGB)
+
+• RGB values (rgb())
+
+• RGBA values (rgba() with transparency)
+
+• HSL values (hsl())
+
+• HSLA values (hsla() with transparency)
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>CSS Color Referencing Demo</title>
+
+<style>
+
+/* 1. Named Color */
+
+.named-color {
+
+color: red;
+
+background-color: lightyellow;
+
+}
+
+/* 2. Hexadecimal */
+
+.hex-color {
+
+color: #0000FF; /* Blue */
+
+background-color: #F0F0F0;
+
+}
+
+/* 3. RGB */
+
+.rgb-color {
+
+color: rgb(0, 128, 0); /* Green */
+
+background-color: rgb(230, 230, 250);
+
+}
+
+/* 4. RGBA */
+
+.rgba-color {
+
+color: rgba(255, 165, 0, 0.9); /* Orange with slight transparency */
+
+background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+/* 5. HSL */
+
+.hsl-color {
+
+color: hsl(240, 100%, 50%); /* Blue */
+
+background-color: hsl(60, 100%, 90%);
+
+}
+
+/* 6. HSLA */
+
+.hsla-color {
+
+color: hsla(300, 100%, 50%, 0.8); /* Purple with transparency */
+
+background-color: hsla(0, 0%, 100%, 0.5);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Different Ways to Apply Colors in CSS</h2>
+
+<p class="named-color">This text uses a named color: <strong>red</strong>.</p>
+
+<p class="hex-color">This text uses a hex code: <strong>#0000FF</strong>.</p>
+
+<p class="rgb-color">This text uses RGB format: <strong>rgb(0, 128, 0)</strong>.</p>
+
+<p class="rgba-color">This text uses RGBA: <strong>rgba(255, 165, 0, 0.9)</strong>.</p>
+
+<p class="hsl-color">This text uses HSL: <strong>hsl(240, 100%, 50%)</strong>.</p>
+
+<p class="hsla-color">This text uses HSLA: <strong>hsla(300, 100%, 50%, 0.8)</strong>.</p>
+</body>
+
+</html>
+
+Outpu
+
+
+
+5 b) Write a CSS rule that places a background image halfway down the page, tilting it horizontally. 
+
+The image should remain in place when the user scrolls up or down.
+
+AIM: Write a CSS rule that places a background image halfway down the page, tilting it 
+
+horizontally.
+
+DESCRIPTION:
+
+Aim: Write a CSS rule that places a background image halfway down the page, tilting it horizontally.
+
+Description:
+
+• Sets a background image on an element.
+
+• Positions the background image vertically at 50% of the page height.
+
+• Applies a horizontal tilt by rotating the image around the X-axis.
+
+• Uses a fixed background attachment so the image stays fixed on the screen and does not scroll with 
+
+the page content.
+
+• Ensures the background image does not repeat and remains visible in the tilted position.
+
+PROGRAM:
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Fixed Flipped Background Example</title>
+
+<style>
+
+body {
+
+margin: 0;
+
+height: 200vh; /* Makes the page scrollable */
+
+}
+
+.background {
+
+position: fixed;
+
+top: 20%; /* Halfway down the page */
+
+left: 0;
+
+width: 100%;
+
+height: 200px; /* Adjust as needed */
+
+background-image:url('https://picsum.photos/id/1015/600/400');
+
+background-repeat:repeat;
+
+background-size:cover;
+
+background-position:center;
+
+transform: rotate(-15deg); /* Flip horizontally */
+
+z-index: -1; /* Place behind content */
+
+}
+
+.content {
+
+padding: 50px;
+
+font-size: 20px;
+
+} 
+
+.vtext{
+
+writing-mode:vertical-rl;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="content">
+
+<h1 class="vtext">Scroll Down</h1>
+
+<p>This is an example page with a background image fixed halfway down and flipped horizontally.</p>
+
+<p>Keep scrolling to see the background image stay in place.</p>
+
+<p>To tilt an image horizontally you can either flip it (mirror across the vertical axis) or rotate it slightly
+
+for a tilted look. Use CSS transform — scaleX(-1) for a horizontal flip, rotate() for a 2D tilt, or rotateX() for 
+
+a 3D tilt effect. Adjust transform-origin and transition for smoother results.</p>
+
+</div>
+</body>
+
+</html>
+
+Output:
+
+
+
+5 c)Write a program using the following terms related to CSS font and text:
+
+i. font-size ii. font-weight iii. font-style 
+
+iv. text-decoration v. text-transformation vi. text-alignment
+
+AIM: Write a program using the following terms related to CSS font and text
+
+DESCRIPTION:
+
+Aim: Write a program using the following terms related to CSS font and text
+
+Description:
+
+• Sets font family, size, and weight
+
+• Controls line height and text alignment
+
+• Applies text decoration and text transform
+
+• Adjusts letter spacing and word spacing
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>CSS Font and Text Properties</title>
+
+<style>
+
+.font-size {
+
+font-size: 24px; /* Increases text size */
+
+}
+
+.font-weight {
+
+font-weight: bold; /* Makes text bold */
+
+}
+
+.font-style {
+
+font-style: italic; /* Makes text italic */
+
+}
+
+.text-decoration {
+
+text-decoration: underline; /* Underlines the text */
+
+}
+
+.text-transform {
+
+text-transform:uppercase; /* Converts text to uppercase */
+
+}
+
+.text-align {
+
+text-align: center; /* Centers the text */
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>CSS Font and Text Formatting Examples</h2>
+
+<p class="font-size">This text uses <strong>font-size: 24px</strong>.</p>
+
+<p class="font-weight">This text uses <strong>font-weight: bold</strong>.</p>
+
+<p class="font-style">This text uses <strong>font-style: italic</strong>.</p>
+
+<p class="text-decoration">This text uses <strong>text-decoration: underline</strong>.</p>
+
+<p class="text-transform">This text uses <strong>text-transform: uppercase</strong>.</p>
+
+<p class="text-align">This text uses <strong>text-align: center</strong>.</p>
+
+</body>
+
+</html>
+
+Output:
+
+
+5 d) Write a program, to explain the importance of CSS Box model using
+
+i. Content ii. Border iii. Margin iv. Padding
+
+AIMAim: Write a program, to explain the importance of CSS Box model
+
+DESCRIPTION:
+
+Description:
+
+• The CSS Box Model wraps content in a box with content, padding, and margin.
+
+• It controls element size, spacing, and alignment.
+
+• Padding and borders separate content from its edges.
+
+• Margins create space between elements.
+
+• Understanding it ensures consistent, predictable layouts across browsers.
+
+PROGRAM:
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>CSS Box Model Demo</title>
+
+ <style>
+
+ .box {
+
+ width: 300px;
+
+ height: 100px;
+
+ background-color: lightyellow; /* Content background */
+
+ padding: 20px; /* Space inside border */
+
+ border: 5px solid orange; /* Border around content and padding */
+
+ margin: 30px auto; /* Space outside the border */
+
+ text-align: center;
+
+ font-size: 18px;
+
+ box-sizing: content-box; /* Default box model behavior */
+
+ }
+
+ body {
+
+ background-color: #f2f2f2;
+
+ font-family: Arial, sans-serif;
+
+ }
+
+ </style>
+
+</head>
+
+<body>
+
+ <h2 style="text-align:center;">CSS Box Model Explanation</h2>
+
+ <div class="box">
+
+ <strong>Content:</strong> This is the main content.<br>
+
+ <strong>Padding:</strong> Adds space inside the box.<br>
+
+ <strong>Border:</strong> Adds a visible edge around it.<br>
+
+ <strong>Margin:</strong> Adds space outside the box.
+
+ </div>
+
+</body>
+
+</html>
+
+Output:
+
+
