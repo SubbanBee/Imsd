@@ -1,0 +1,659 @@
+2 a) Write a HTML program, to explain the working of tables. (use tags: <table>, <tr>, <th>, <td> and 
+
+attributes: border, rowspan, colspan).
+
+Aim: To write a HTML program to explain the working of tables using tags : <table> , <tr> , <th>, <td> and 
+
+attributes: border, rowspan and colspan.
+
+Description:
+
+The <table> tag in HTML is used to create a table structure to display data in rows and columns.
+
+Tag - Purpose
+
+<table> - Starts the table structure.
+
+<tr> - Defines a table row.
+
+<th> - Defines a header cell (bold and centered by default).
+
+<td> - Defines a data cell (normal text).
+
+<thead> - Groups the header content. Helps in accessibility and styling.
+
+<tbody> - Groups the main body content of the table.
+
+<tfoot> - Groups the footer content, usually summary or totals.
+
+<caption> - Adds a title to the table (appears above the table).
+
+Program:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>Employee Information Table</title>
+
+</head>
+
+<body>
+
+ <h1>Company Employee Information</h1>
+
+ <table border="1" cellpadding="8" cellspacing="0">
+
+ <tr>
+
+ <th>Emp ID</th>
+
+ <th>Name</th>
+
+ <th>Department</th>
+
+ <th>Designation</th>
+
+ <th>Email</th>
+
+ <th>Phone</th>
+
+ <th>Salary</th>
+
+ <th>Address</th>
+
+ </tr>
+
+ <tr>
+
+ <td>EMP201</td>
+
+ <td>Emma Watson</td>
+
+ <td>Marketing</td>
+
+ <td>Executive</td>
+
+ <td>emma.marketing@company.com</td>
+
+ <td>9871234560</td>
+
+ <td>$55,000</td>
+
+ <td>Los Angeles, USA</td>
+
+ </tr>
+<tr>
+
+ <td>EMP202</td>
+
+ <td>Liam Johnson</td>
+
+ <td>IT</td>
+
+ <td>Developer</td>
+
+ <td>liam.it@company.com</td>
+
+ <td>9123456781</td>
+
+ <td>$75,000</td>
+
+ <td>Seattle, USA</td>
+
+ </tr>
+
+ <tr>
+
+ <td>EMP203</td>
+
+ <td>Sophia Brown</td>
+
+ <td>Finance</td>
+
+ <td>Accountant</td>
+
+ <td>sophia.finance@company.com</td>
+
+ <td>9988771122</td>
+
+ <td>$65,000</td>
+
+ <td>Boston, USA</td>
+
+ </tr>
+
+ <tr>
+
+ <td>EMP204</td>
+
+ <td>Oliver Smith</td>
+
+ <td>HR</td>
+
+ <td>Coordinator</td>
+
+ <td>oliver.hr@company.com</td>
+
+ <td>9876543211</td>
+
+ <td>$50,000</td>
+
+ <td>Miami, USA</td>
+
+ </tr>
+
+ </table>
+
+</body>
+
+</html>
+
+OUTPUT:
+
+
+
+2 b) Write a HTML program, to explain the working of tables by preparing a timetable. (Note: Use 
+
+<caption> tag to set the caption to the table & also use cell spacing, cell padding, border, rowspan, 
+
+colspan etc.).
+
+Aim:TO write an HTML program to explain the working of tables by preparing a timetable. The table should 
+
+include features like <caption>, cellspacing, cellpadding, border, rowspan, and colspan.
+
+Description:
+
+In HTML, the <table> tag is used to display data in a tabular format with rows and columns. Timetables can 
+
+be created using this structure.
+
+• The <caption> tag is used to give a heading or title to the table.
+
+• The border, cellspacing, and cellpadding attributes are used to set the border thickness, spacing 
+
+between cells, and space inside each cell respectively.
+
+• The <tr> tag defines a row, <th> defines a header cell, and <td> defines a data cell.
+
+• The rowspan attribute merges a cell across multiple rows, as used for the Lunch Break column in 
+
+the timetable.
+
+• The colspan attribute merges cells across multiple columns, as shown for lab sessions (e.g., Python 
+
+Programming Lab, Physics Laboratory).
+
+Program:
+
+<!TIMETABLE>
+
+<html>
+
+<body>
+
+<table border="1" cellpadding="10" cell spacing="5">
+
+<caption><h2>II CSE-E</h2> </caption>
+
+<tr>
+
+<th>Day/Time</th>
+
+<th> 9:30 AM - 10:20 AM </th>
+
+<th> 10:20 AM - 11:10 AM </th>
+
+<th> 11:10 AM - 12:00 PM </th>
+
+<th> 12:00 PM - 12:50 PM </th>
+
+<th> 12:50 PM - 1:50 PM </th>
+
+<th> 1:50 PM - 2:40 PM </th>
+
+<th> 2:40 PM - 3:30 PM </th>
+
+<th> 3:30 PM - 4:20 PM </th>
+
+</tr>
+
+<tr>
+
+<td> <b>Monday</b> </td>
+
+<td> ASE </td>
+
+<td> DMS </td>
+
+<td colspan=2> IMSD </td>
+
+<td >LUNCH </td>
+
+<td> CPP </td>
+
+<td colspan =2> DBMS LAB </td>
+
+</tr>
+
+<tr>
+
+<td> <b>Tuesday</b> </td>
+
+<td colspan =2> DBMS LAB </td>
+
+<td>TOC </td>
+
+<td > CPP </td>
+
+<td>LUNCH </td>
+
+<td colspan =2> DAP(P) </td>
+
+<td > FIP </td>
+
+</tr>
+
+<tr>
+
+<td><b> Wednesday </b></td>
+
+<td> TOC </td>
+
+<td colspan =2> CODING </td>
+
+<td >CPP</td>
+
+<td>LUNCH </td>
+<td colspan=2> CPP(P) </td>
+
+<td> ASE </td>
+
+</tr><tr>
+
+<td><b> Thursday </b></td>
+
+<td colspan=2> CPP(P) </td>
+
+<td> DMS </td>
+
+<td > TOC </td>
+
+<td>LUNCH </td>
+
+<td> ASE </td>
+
+<td colspan =2> PSA </td>
+
+</tr><tr>
+
+<td><b> Friday </b></td>
+
+<td> DBMS </td>
+
+<td> DMS </td>
+
+<td colspan=2> DAP(P) </td>
+
+<td>LUNCH </td>
+
+<td colspan =2> IMSD(P) </td>
+
+<td > FIP </td>
+
+</tr>
+
+<tr>
+
+<td> Saturday </td>
+
+<th colspan=8> NO INSTRUCTION DAY</th>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+
+Output:
+
+
+2 c) Write a HTML program, to explain the working of forms by designing Registration form. (Note: 
+
+Include text field, password field, number field, date of birth field, checkboxes, radio buttons, list 
+
+boxes using <select>&<option> tags, <text area> and two buttons ie: submit and reset. Use tables to 
+
+provide a better view).
+
+Aim:To create a Registration Form in HTML using different form elements such as text fields, password, 
+
+number, date of birth, checkboxes, radio buttons, list boxes, text area, and buttons, arranged neatly using a 
+
+table.
+
+Description:
+
+The <form> tag is used to create an HTML form for collecting user input. Forms can be used to send data 
+
+to a server, such as login information, feedback, survey responses, or file uploads.
+Program: 
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>Registration Form</title>
+
+</head>
+
+<body>
+
+ <h1>Registration Form</h1>
+
+ <form action="#" method="post">
+
+ <table border="1" cellpadding="10" cellspacing="0">
+
+ <!-- Name -->
+
+ <tr>
+
+ <td>Name:</td>
+
+ <td><input type="text" name="name" required></td>
+
+ </tr>
+
+ <!-- Password -->
+
+ <tr>
+
+ <td>Password:</td>
+
+ <td><input type="password" name="password" required></td>
+
+ </tr>
+
+ <!-- Age -->
+
+ <tr>
+
+ <td>Age:</td>
+
+ <td><input type="number" name="age" min="1" max="100" required></td>
+
+ </tr>
+
+ <!-- Date of Birth -->
+
+ <tr>
+
+ <td>Date of Birth:</td>
+
+ <td><input type="date" name="dob" required></td>
+
+ </tr>
+
+ <!-- Gender -->
+
+ <tr>
+
+ <td>Gender:</td>
+
+ <td>
+
+ <input type="radio" name="gender" value="Male" required> Male
+
+ <input type="radio" name="gender" value="Female"> Female
+
+ <input type="radio" name="gender" value="Other"> Other
+
+ </td>
+
+ </tr>
+
+ <!-- Hobbies -->
+
+ <tr>
+
+ <td>Hobbies:</td>
+
+ <td>
+
+ <input type="checkbox" name="hobbies" value="Reading"> Reading
+
+ <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+
+ <input type="checkbox" name="hobbies" value="Gaming"> Gaming
+
+ </td>
+
+ </tr>
+
+ <!-- Country (Dropdown) -->
+
+ <tr>
+
+ <td>Country:</td>
+
+ <td>
+
+ <select name="country" required>
+
+ <option value="">Select Country</option>
+
+ <option value="India">India</option>
+
+ <option value="USA">USA</option>
+
+ <option value="UK">UK</option>
+
+ <option value="Australia">Australia</option>
+
+ </select>
+</td>
+
+ </tr>
+
+ <!-- Address (Textarea) -->
+
+ <tr>
+
+ <td>Address:</td>
+
+ <td>
+
+ <textarea name="address" rows="4" cols="30" placeholder="Enter your address"></textarea>
+
+ </td>
+
+ </tr>
+
+ <!-- Submit and Reset Buttons -->
+
+ <tr>
+
+ <td colspan="2" align="center">
+
+ <input type="submit" value="Submit">
+
+ <input type="reset" value="Reset">
+
+ </td>
+
+ </tr>
+
+ </table>
+
+ </form>
+
+</body>
+
+</html>
+
+Output:
+
+
+
+2 d) Write a HTML program, to explain the working of frames, such that page is to be divided into 3 
+
+parts on either direction. (Note: first frame image, second frame paragraph, third frame hyperlink. 
+
+And also make sure of using “no frame” attribute such that frames to be fixed).
+
+Aim:To design an HTML page using frames, dividing it into three parts to display an image, a paragraph, 
+
+and a hyperlink, while also using the noframes tag for browsers that do not support frames.
+
+Description:
+
+The <frameset> tag was used in HTML 4 to divide the browser window into multiple frames, each capable 
+
+of displaying a different HTML document simultaneously. It replaces the <body> tag and allows developers 
+
+to create a multi-pane view in one browser window.
+
+Purpose of <frameset>:
+
+• To split the web page into rows or columns.
+
+• To load multiple documents at the same time within one page.
+
+• To enable side-by-side navigation, like menus and content areas.
+
+Program:
+
+image.html:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Image Frame</title>
+
+</head>
+
+<body>
+
+<h2 align="center">Welcome to Our Site</h2>
+
+<div align="center">
+
+<img src="people.jpeg" alt="Sample Image" width="600">
+
+</div>
+
+</body>
+
+</html>
+
+paragraph.html:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Paragraph Frame</title>
+
+</head>
+
+<body>
+
+<h3 align="center">About Us</h3>
+
+<p align="justify" style="padding: 10px;">
+
+This website demonstrates the usage of HTML frames by dividing the layout into three horizontal 
+
+sections.
+
+The first frame shows an image, the second frame provides some descriptive text, and the third frame 
+
+lists useful links.
+
+Frames are used to present multiple HTML documents within a single browser window.
+
+</p>
+
+</body>
+
+</html>
+
+links.html:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Links Frame</title>
+
+</head>
+
+<body>
+
+<h3 align="center">Useful Links</h3>
+
+<ul style="text-align: center; list-style-type: none;">
+
+<li><a href="https://www.google.com" target="_blank">Google</a></li>
+
+<li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+
+<li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+
+</ul>
+
+</body>
+</html>
+
+framesetdemo.html:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Frameset Example</title>
+
+</head>
+
+<frameset rows="30%,40%,30%">
+
+<frame src="image.html" name="frame1">
+
+<frame src="paragraph.html" name="frame2">
+
+<frame src="links.html" name="frame3">
+
+<noframes>
+
+<body>
+
+<p>This page uses frames but your browser does not support them.</p>
+
+</body>
+
+</noframes>
+
+</frameset>
+
+</html>
+
+Output:
+
+
